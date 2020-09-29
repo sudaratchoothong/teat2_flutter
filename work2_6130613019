@@ -1,0 +1,124 @@
+import 'package:flutter/material.dart';
+void main() => runApp(MyApp());
+var headerSection = Container(
+  child: Row(
+    children: [
+      Image.network(
+          'https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.15752-9/120425971_666190230693024_8692107969040856826_n.jpg?_nc_cat=108&_nc_sid=ae9488&_nc_eui2=AeEdJW9TN1sD7TzbZGrezCQPIijvbfxBe6UiKO9t_EF7pYvs5-ANiX6UhKCyWIthKAc4NXbmQhXAANf9s2J7TzOQ&_nc_ohc=MRF-DqNdMaEAX_TA1Er&_nc_ht=scontent.fbkk10-1.fna&oh=28091fef1eedf16f6c6885ed9b47a284&oe=5F973C6F'),
+      Column(children: [
+        Text("COC Reterrun",
+            style: TextStyle(
+              fontSize: 30,
+            )),
+        Text("PSU Phuket",
+            style: TextStyle(
+              fontSize: 30,
+            )),
+      ])
+    ],
+  ),
+  color: Colors.red,
+);
+var body1 = Container(
+  child: Row(
+    children: [
+      Image.network(
+          'https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.15752-9/120227694_971162160034134_1497464268674626125_n.jpg?_nc_cat=102&_nc_sid=ae9488&_nc_eui2=AeFAK40zGB-nP8nzRaCYPmt6o-_Lul26_d2j78u6Xbr93RSprR25cap3IjBonzMBSIe4dk4sPUtHUdhnJ4ZIKev0&_nc_ohc=FujaooiP0qYAX8b5INM&_nc_oc=AQkR-sXlwX4f0PNRrl-kEKKk1ewGupTuMTdxVQnHni6RNCQQVQroXirPKVnvHzQ7Xu8&_nc_ht=scontent.fbkk10-1.fna&oh=f42c109612f99179692d07c624ef6a56&oe=5F98CBE7'),
+      Text("Menu 1",
+          style: TextStyle(
+            fontSize: 20,
+          )),
+    ],
+  ),
+  color: Colors.green,
+);
+var body2 = Container(
+  child: Row(
+    children: [
+      Image.network(
+          'https://lms2.psu.ac.th/pluginfile.php/619291/mod_resource/content/1/Menu2.jpg'),
+      Text("Menu 2",
+          style: TextStyle(
+            fontSize: 20,
+          )),
+    ],
+  ),
+  color: Colors.green,
+);
+var body3 = Container(
+  child: Row(
+    children: [
+      Image.network(
+          'https://lms2.psu.ac.th/pluginfile.php/619292/mod_resource/content/1/Menu3.jpg'),
+      Text("Menu 3",
+          style: TextStyle(
+            fontSize: 20,
+          )),
+    ],
+  ),
+  color: Colors.green,
+);
+var body4 = Container(
+  child: Row(
+    children: [
+      Image.network(
+          'https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.15752-9/120428144_1201103820261536_7371613166746579165_n.jpg?_nc_cat=105&_nc_sid=ae9488&_nc_eui2=AeEN8mjw9g3YAzsks5sMLEeVBUY9Aeyc8IMFRj0B7Jzwg3ITLCqTSlFJw0WJDaAJc7h00-7WNoTRk_0zBIqOUPGq&_nc_ohc=-glL3zyayMQAX8i-VY4&_nc_ht=scontent.fbkk10-1.fna&oh=61a3e1d1b0be9b16166f0f1b1d50c0b7&oe=5F96E980'),
+      Text("Menu 4",
+          style: TextStyle(
+            fontSize: 20,
+          )),
+    ],
+  ),
+  color: Colors.green,
+);
+var buttonSection = Container(
+  child: Column(
+    children: [
+      Text("Countact : ",
+          style: TextStyle(
+            fontSize: 50,
+          )),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+        Column(
+          children: [
+           Icon(Icons.mail,size: 80, color: Colors.black,),
+           Text("Mail",
+          style: TextStyle(
+            fontSize: 40,
+          )),
+        ],),
+        Column(children: [
+           Icon(Icons.phone,size: 80, color: Colors.black,),
+           Text("Phone",
+          style: TextStyle(
+            fontSize: 40,
+          )),
+        ],),
+      ],),
+    ],
+  ),
+  color: Colors.blue,
+);
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Test UI workshop",
+      home: Scaffold(
+          appBar: AppBar(title: Text("College of Computing")),
+          body: ListView(
+            children: <Widget>[
+     
+              headerSection,
+              body1,
+              body2,
+              body3,
+              body4,
+              buttonSection,
+            ],
+          )),
+    );
+  }
+}
